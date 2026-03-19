@@ -1,0 +1,14 @@
+{
+  "name": "pixel-art-monorepo",
+  "private": true,
+  "workspaces": [
+    "client",
+    "api"
+  ],
+  "scripts": {
+    "dev:client": "yarn workspace client dev",
+    "dev:api": "yarn workspace pixel-art-api dev",
+    "build:client": "yarn workspace client build",
+    "build:api": "yarn workspace pixel-art-api build"
+  }
+}

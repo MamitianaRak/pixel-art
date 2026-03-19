@@ -1,0 +1,14 @@
+services:
+  mongodb:
+    image: mongo:8.0
+    container_name: ${MONGO_CONTAINER_NAME:-pixel-art-mongodb}
+    restart: unless-stopped
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-pixel-art}
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
